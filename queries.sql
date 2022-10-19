@@ -31,6 +31,13 @@ Update animals set weight_kg = weight_kg * -1 where weight_kg < 0;
 COMMIT;
 
 select * from animals;
+How many animals are there?
+How many animals have never tried to escape?
+What is the average weight of animals?
+Who escapes the most, neutered or not neutered animals?
+What is the minimum and maximum weight of each type of animal?
+What is the average number of escape attempts per animal type of those born between 1990 and 2000?
+
 select count(*) from animals;
 
 select count(*) from animals where escape_attempts = 0;
@@ -45,8 +52,6 @@ select species, avg(escape_attempts) from animals where date_of_birth between '1
 
 
 
-List all animals owned by Dean Winchester that haven't tried to escape.
-Who owns the most animals?'
 
 
 select * from animals
@@ -68,3 +73,4 @@ JOIN owners ON animals.owner_id = owners.id
 GROUP BY owners.full_name 
 ORDER BY COUNT(*) DESC 
 LIMIT 1;
+
