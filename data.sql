@@ -40,13 +40,12 @@ update animals set species_id = (Select id from species where name = 'Pokemon');
 
 update animals set species_id = (Select id from species where name = 'Digimon') where name like '%mon';
 
-Dean Winchester owns Angemon and Boarmon.
-update animals set owner_id = (select id from owners where name = 'Sam Smith') where name = 'Agumon';
-update animals set owner_id = (select id from owners where name = 'Jennifer Orwell') where name = 'Gabumon' or name = 'Pikachu';
-update animals set owner_id = (select id from owners where name = 'Bob') where name = 'Devimon' or name = 'Plantmon';
-update animals set owner_id = (select id from owners where name = 'Melody Pond') where name = 'Charmander' or name = 'Squirtle' or name = 'Blossom';
+update animals set owner_id = (select id from owners where full_name = 'Sam Smith') where name = 'Agumon';
+update animals set owner_id = (select id from owners where full_name = 'Jennifer Orwell') where name = 'Gabumon' or name = 'Pikachu';
+update animals set owner_id = (select id from owners where full_name = 'Bob') where name = 'Devimon' or name = 'Plantmon';
+update animals set owner_id = (select id from owners where full_name = 'Melody Pond') where name = 'Charmander' or name = 'Squirtle' or name = 'Blossom';
 
-update animals set owner_id = (select id from owners where name = 'Dean Winchester') where name = 'Angemon' or name = 'Boarmon';
+update animals set owner_id = (select id from owners where full_name = 'Dean Winchester') where name = 'Angemon' or name = 'Boarmon';
 
 
 
