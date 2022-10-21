@@ -24,3 +24,22 @@ create table species(
 alter table animals add species_id int references species(id);
 alter table animals add owner_id int references owners(id);
 
+create table vets (
+    id int PRIMARY KEY GENERATED ALWAYS As IDENTITY,
+    name varchar(50),
+    age int,
+    date_of_graduation date
+)
+
+create table specializations (
+    id int PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+    vet_id int,
+    species_id int
+)
+
+
+create table visits(
+    id int PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+    animal_id int,
+    vet_id int 
+)
