@@ -31,15 +31,18 @@ create table vets (
     date_of_graduation date
 )
 
+
 create table specializations (
     id int PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
-    vet_id int,
-    species_id int
-)
+    vet_id int references vets(id),
+    species_id int references species(id)
+) 
 
 
 create table visits(
     id int PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
-    animal_id int,
-    vet_id int 
+    animal_id int references animals(id),
+    vet_id int  references vets(id)
 )
+
+alter table visits add date_of_visit date;
