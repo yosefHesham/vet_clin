@@ -22,15 +22,6 @@ rollback to savepoint mysavepoint;
 commit;
 select * from animals;
 
-BEGIN;
-Delete from animals where date_of_birth > '2022-01-01';
-SAVEPOINT deleteBasedOnDate;
-Update animals set weight_kg = weight_kg * -1;
-ROLLBACK To SAVEPOINT deleteBasedOnDate;
-Update animals set weight_kg = weight_kg * -1 where weight_kg < 0;
-COMMIT;
-
-select * from animals;
 How many animals are there?
 How many animals have never tried to escape?
 What is the average weight of animals?
@@ -51,26 +42,4 @@ select species, min(weight_kg) as min, max(weight_kg) as max  from animals group
 select species, avg(escape_attempts) from animals where date_of_birth between '1990-01-01' and '2000-12-31' group by species ;
 
 
-
-
-
-select * from animals
-select * from owners;
-select * from animals join owners on animals.owner_id = owners.id where owners.full_name = 'Melody Pond';
-select * from animals join species on animals.species_id = species.id where species.name = 'Pokemon';
-
-select * from animals  right join owners on owners.id = animals.owner_id;
-
-select count(*), species.name from animals join species on species.id = animals.species_id group by species.name;
-
-select * from animals join owners on owners.id = animals.owner_id where  owners.full_name = 'Jennifer Orwell' and  species_id = (select id from species where name = 'Digimon' );
-
-select * from animals join owners on owners.id = animals.owner_id where owners.full_name = 'Dean Winchester' and escape_attempts = 0;
-
-
-SELECT COUNT(*), owners.full_name AS owner FROM animals 
-JOIN owners ON animals.owner_id = owners.id 
-GROUP BY owners.full_name 
-ORDER BY COUNT(*) DESC 
-LIMIT 1;
 
