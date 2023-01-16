@@ -73,49 +73,4 @@ JOIN owners ON animals.owner_id = owners.id
 GROUP BY owners.full_name 
 ORDER BY COUNT(*) DESC 
 LIMIT 1;
-What specialty should Maisy Smith consider getting? Look for the species she gets the most.
-
-
- select * from animals where id = ( select animal_id from visits where vet_id = (Select id from vets where name = 'William Tatcher') order by date_of_visit desc LIMIT 1);
-
-SELECT DISTINCT animals.name AS animal_name 
-FROM visits 
-JOIN animals ON animals.id = visits.animal_id 
-AND vet_id = (SELECT id FROM vets WHERE name = 'Stephanie Mendez')
-
-
-select vets.name, species.name from specializations right join  vets on vets.id = specializations.vet_id
-left join  species on  species.id = specializations.species_id
-
-select animals.name from visits join animals on animals.id = visits.animal_id where visits.vet_id = (select id from vets where name = 'Stephanie Mendez') and date_of_visit between '2020-04-01' and '2020-08-31'
-
-select animals.name, count(animal_id) from visits join animals on animals.id = visits.animal_id
-group by animals.name
-order by count(animal_id) desc limit 1
-
-select animals.name from visits join animals on animals.id = visits.animal_id and visits.vet_id = (select id from vets where name = 'Maisy Smith')
-order by date_of_visit limit 1;
-
-select * from visits join vets on vets.id = visits.vet_id
-join animals on animals.id = visits.animal_id
-order by date_of_visit desc limit 1;
-
-
-
-SELECT  COUNT(*) 
-FROM vets
-JOIN visits ON visits.vet_id = vets.id
-JOIN animals ON visits.animal_id = animals.id
-JOIN specializations ON vets.id = specializations.vet_id
-WHERE NOT specializations.species_id = animals.species_id;
-
-
-SELECT species.name
-FROM animals
-JOIN species ON species.id = animals.species_id
-JOIN visits ON visits.animal_id = animals.id
-JOIN vets ON vets.id = visits.vet_id AND vets.name = 'Maisy Smith'
-GROUP BY species.name
-ORDER BY COUNT(species_id) DESC
-LIMIT 1;
 
