@@ -1,6 +1,6 @@
 > Description
 
-This project is a database for vet clinic, enables you to store, and retrieve animals
+This project is a database for vet clinic, enables you to store, and retrieve animals, their types, ages, owners..
 
 ## Getting Started
 
