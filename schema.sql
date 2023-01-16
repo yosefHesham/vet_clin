@@ -7,5 +7,3 @@ create table animals (
     weight_kg decimal,
     escape_attempts int
 )
-
-alter table animals add species varchar(50)
