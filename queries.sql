@@ -11,7 +11,7 @@ Select * from animals where weight_kg >= 10.4 and weight_kg <= 17.3;
 Begin;
 update animals set species = 'unspecified';
 update animals set species = 'pokemon';
-update animals set species = 'digimon' where name like '%mon';
+update animals set species = 'digimon' where name like '%mon' ;
 commit;
 
 select * from animals;
