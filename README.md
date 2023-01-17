@@ -1,8 +1,10 @@
 > Description
 
-This project is a database for vet clinic, enables you to store, and retrieve animals
+This project is a database for vet clinic, enables you to store, and retrieve animals, their types, ages, owners..
 
 ## Getting Started
+
+![Schema Diagram](/schema.png)
 
 - Use [schema.sql](./schema.sql) to create all tables.
 - Use [data.sql](./data.sql) to populate tables with sample data.
