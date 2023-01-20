@@ -11,7 +11,7 @@ Select * from animals where weight_kg >= 10.4 and weight_kg <= 17.3;
 Begin;
 update animals set species = 'unspecified';
 update animals set species = 'pokemon';
-update animals set species = 'digimon' where name like '%mon';
+update animals set species = 'digimon' where name like '%mon' ;
 commit;
 
 select * from animals;
@@ -45,26 +45,3 @@ select species, avg(escape_attempts) from animals where date_of_birth between '1
 
 
 
-List all animals owned by Dean Winchester that haven't tried to escape.
-Who owns the most animals?'
-
-
-select * from animals
-select * from owners;
-select * from animals join owners on animals.owner_id = owners.id where owners.full_name = 'Melody Pond';
-select * from animals join species on animals.species_id = species.id where species.name = 'Pokemon';
-
-select * from animals  right join owners on owners.id = animals.owner_id;
-
-select count(*), species.name from animals join species on species.id = animals.species_id group by species.name;
-
-select * from animals join owners on owners.id = animals.owner_id where  owners.full_name = 'Jennifer Orwell' and  species_id = (select id from species where name = 'Digimon' );
-
-select * from animals join owners on owners.id = animals.owner_id where owners.full_name = 'Dean Winchester' and escape_attempts = 0;
-
-
-SELECT COUNT(*), owners.full_name AS owner FROM animals 
-JOIN owners ON animals.owner_id = owners.id 
-GROUP BY owners.full_name 
-ORDER BY COUNT(*) DESC 
-LIMIT 1;
