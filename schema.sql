@@ -11,7 +11,7 @@ create table animals (
 alter table animals add species varchar(50)
 
 create table owners (
-    id int PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+    id int PRIMARY KEY GENERATED ALWAYS AS IDENTITY , 
     full_name varchar(50),
     age int 
 );
