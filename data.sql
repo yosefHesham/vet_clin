@@ -15,15 +15,6 @@ insert into animals (name,date_of_birth,weight_kg,neutered,escape_attempts)
 ('Blossom','Oct 13, 1998',17,true,3),
 ('Ditto','May 14, 2022',22,true,4)
 
-
-Insert the following data into the owners table:
-Sam Smith 34 years old.
-Jennifer Orwell 19 years old.
-Bob 45 years old.
-Melody Pond 77 years old.
-Dean Winchester 14 years old.
-Jodie Whittaker 38 years old.
-
 insert into owners (full_name,age) 
 values ('Sam smith',34),
 ('Jennifer Orwell',10),
