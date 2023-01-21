@@ -1,5 +1,5 @@
 
-create table animals (
+create table animals  (
     id int PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
     name varchar(60),
     date_of_birth date,
@@ -46,3 +46,4 @@ create table visits(
 )
 
 alter table visits add date_of_visit date;
+

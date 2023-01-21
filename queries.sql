@@ -35,6 +35,32 @@ ROLLBACK To  SAVEPOINT deleteBasedOnDate ;
 Update animals set weight_kg = weight_kg * -1 
 where weight_kg < 0 ;
 COMMIT ;
+=======
+update animals set species = 'unspecified';
+update animals set species = 'pokemon';
+update animals set species = 'digimon' where name like '%mon' ;
+commit;
+
+select * from animals;
+Begin;
+savepoint mysavepoint;
+delete from animals;
+rollback to savepoint mysavepoint;
+commit;
+select * from animals;
+
+BEGIN;
+Delete from animals where date_of_birth > '2022-01-01';
+SAVEPOINT deleteBasedOnDate;
+Update animals set weight_kg = weight_kg * -1;
+ROLLBACK To SAVEPOINT deleteBasedOnDate;
+Update animals set weight_kg = weight_kg * -1 where weight_kg < 0; 
+COMMIT;
+
+select * from animals;
+select count(*) from animals;
+
+select count(*) from animals where escape_attempts = 0;
 
 select * from animals ;
 select count(*) from animals ;
@@ -130,3 +156,4 @@ JOIN vets ON vets.id = visits.vet_id  AND vets.name = 'Maisy Smith'
 GROUP BY  species.name
 ORDER BY  COUNT(species_id)  DESC
 LIMIT  1;
+

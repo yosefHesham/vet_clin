@@ -1,9 +1,9 @@
 
 insert into animals (name,date_of_birth,weight_kg,neutered,escape_attempts)
  values 
-('Agumon','Feb 3, 2020',10.23,true,0),
+('Agumon','Feb 3, 2020',10.23,true,0) ,
 ('Gabumon','Nov 26, 2018',8,true,2),
-('Pikachu','Jan 7, 2021',15.04,false,1),
+('Pikachu','Jan 7, 2021',15.04,false,1) ,
 ('Devimon','May 12, 2017',11,true,5)
 insert into animals (name,date_of_birth,weight_kg,neutered,escape_attempts)
  values 
@@ -14,15 +14,6 @@ insert into animals (name,date_of_birth,weight_kg,neutered,escape_attempts)
 ('Boarmon','Jun 7, 2005',20.4,true,7),
 ('Blossom','Oct 13, 1998',17,true,3),
 ('Ditto','May 14, 2022',22,true,4)
-
-
-Insert the following data into the owners table:
-Sam Smith 34 years old.
-Jennifer Orwell 19 years old.
-Bob 45 years old.
-Melody Pond 77 years old.
-Dean Winchester 14 years old.
-Jodie Whittaker 38 years old.
 
 insert into owners (full_name,age) 
 values ('Sam smith',34),
@@ -83,3 +74,5 @@ INSERT INTO visits (vet_id,animal_id,date_of_visit) VALUES
   ((SELECT id FROM vets WHERE name = 'Stephanie Mendez') , (SELECT id FROM animals WHERE name = 'Blossom'), 'May 24, 2020'),
   ((SELECT id FROM vets WHERE name = 'William Tatcher') , (SELECT id FROM animals WHERE name = 'Blossom'), 'Jan 11, 2021');
 
+
+ 
