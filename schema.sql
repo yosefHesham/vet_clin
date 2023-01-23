@@ -47,3 +47,4 @@ create table visits(
 
 alter table visits add date_of_visit date;
 
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
