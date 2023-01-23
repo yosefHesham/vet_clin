@@ -11,9 +11,9 @@ create table animals  (
 alter table animals add species varchar(50)
 
 create table owners (
-    id int PRIMARY KEY GENERATED ALWAYS AS IDENTITY , 
+    id int PRIMARY KEY GENERATED ALWAYS AS IDENTITY ,
     full_name varchar(50),
-    age int 
+    age int
 );
 
 create table species(
@@ -36,7 +36,7 @@ create table specializations (
     id int PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
     vet_id int references vets(id),
     species_id int references species(id)
-) 
+)
 
 
 create table visits(
@@ -48,3 +48,7 @@ create table visits(
 alter table visits add date_of_visit date;
 
 ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
+CREATE INDEX animals_desc ON visits(animal_id DESC);
+CREATE INDEX vets_id_desc ON visits(vets_id DESC);
+CREATE INDEX email_desc ON owners(email DESC);
