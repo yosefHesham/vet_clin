@@ -50,5 +50,5 @@ alter table visits add date_of_visit date;
 ALTER TABLE owners ADD COLUMN email VARCHAR(120);
 
 CREATE INDEX animals_desc ON visits(animal_id DESC);
-CREATE INDEX vets_id_desc ON visits(vets_id DESC);
+CREATE INDEX vets_id_desc ON visits(vet_id DESC);
 CREATE INDEX email_desc ON owners(email DESC);

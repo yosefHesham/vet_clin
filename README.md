@@ -20,7 +20,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 [Vet Clinic] <a name="about-project"></a>
 
 > This project is a database for vet clinic, enables you to store, and retrieve animals
 
@@ -94,6 +94,12 @@ Clone this repository to your desired folder.
 
 - GitHub: [@yosefHesham](https://github.com/yosefHesham)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/yousef-hesham98)
+
+
+
+👤 **Muzzafer**
+
+- GitHub: [@jellywiz](https://github.com/jellywiz)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
