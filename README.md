@@ -23,6 +23,8 @@
 # 📖 [Vet Clinic] <a name="about-project"></a>
 
 > This project is a database for vet clinic, enables you to store, and retrieve animals
+![Schema Diagram](/schema.png)
+
 
 
 **[your_project__name]** is vet clinic
@@ -63,7 +65,6 @@
 > Describe how a new developer could make use of your project.
 
 
-![Schema Diagram](/schema.png)
 
 - Use [schema.sql](./schema.sql) to create all tables.
 - Use [data.sql](./data.sql) to populate tables with sample data.
